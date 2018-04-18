@@ -21,7 +21,7 @@ export class MainComponent implements OnInit {
     constructor(
         private logging: SpacesLoggingService,
         private messages: SpacesMessagesService,
-        private router: Router,
+        public router: Router,
         private spacesBase: SpacesBaseService
     ) {
         this.logging.moduleColor('#FFFF00', '#000', 'MainComponent');  // set logging console colors

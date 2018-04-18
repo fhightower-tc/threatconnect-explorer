@@ -1,0 +1,7 @@
+Type a title/headline below or upload a document to start exploring similar content in TC.
+<br><br>
+Owner:<input type="text" name="" [(ngModel)]="owner" placeholder="Enter the owner in which you would like to search for content">
+Title/Headline:<input type="text" name="" [(ngModel)]="title" placeholder="Enter a title or headline you would like to investigate">
+<input type="file" (change)="uploadFile($event)">
+
+<button class="button" (click)="startTransfer()">Start exploring</button>

@@ -1,0 +1,33 @@
+<div>
+    <div class="columns large-2 medium-2">
+        <div class="callout secondary">
+            <h5>Matching Tags</h5>
+            <ul>
+                <!-- TODO: add link to tags (if possible) -->
+                <li *ngFor="let tag of matchingTags"><a href="">{{ tag }}</a></li>
+            </ul>
+        </div>
+        <div class="callout secondary">
+            <h5>Similar Tags</h5>
+            <i>These are tags you may also be interested in</i>
+            <ul>
+                <!-- TODO: add link to tags (if possible) -->
+                <li *ngFor="let tag of similarTags"><a href="">{{ tag }}</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="columns large-10 medium-10">
+        <div class="callout">
+            <h5>Similar Groups</h5>
+            <ul>
+                <li *ngFor="let group of (groups | ngFuse:title:{keys: ['name']})"><a href="">{{ group.name }}</a></li>
+            </ul>
+        </div>
+        <div class="callout">
+            <h5>Matching Indicators</h5>
+            <ul>
+                <li *ngFor="let indicator of matchingIndicators"><a href="">{{ indicator.name }}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

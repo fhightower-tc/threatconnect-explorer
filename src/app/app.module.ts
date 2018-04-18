@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
 /* Third-Party */
+import { NgFuseModule } from 'ng2-fuse';
 import {
     BowserModule,
     BowserService
@@ -57,8 +58,13 @@ import {
     // Url
 } from 'threatconnect-ng';
 
+import { UploaderComponent } from './components/uploader/uploader.component';
+import { AnalyzerComponent } from './components/analyzer/analyzer.component';
+import { TransferService } from './services/transfer.service';
+
 @NgModule({
     imports: [
+        NgFuseModule,
         /* Core */
         AppRoutingModule,
         BrowserModule,
@@ -84,9 +90,12 @@ import {
     ],
     declarations: [
         AppComponent,
-        MainComponent
+        MainComponent,
+        UploaderComponent,
+        AnalyzerComponent
     ],
     providers: [
+        TransferService,
         /* Bowser Service */
         BowserService,
         /* TC Service */
